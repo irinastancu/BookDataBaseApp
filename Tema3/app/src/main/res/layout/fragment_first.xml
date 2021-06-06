@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_200"
+    tools:context="com.example.tema3.fragments.FirstFragment">
+
+
+    <EditText
+        android:id="@+id/book_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="BookTitle"
+        android:maxLength="100"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <EditText
+        android:id="@+id/book_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="BookAuthor"
+        android:maxLength="100"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+
+        app:layout_constraintTop_toBottomOf="@id/book_title" />
+
+    <EditText
+        android:id="@+id/book_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="BookDescription"
+        android:lines="2"
+        android:maxLength="1000"
+        android:minLines="2"
+        android:ellipsize="end"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+
+        app:layout_constraintTop_toBottomOf="@id/book_author" />
+    <Button
+        android:id="@+id/add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/book_description"
+        app:layout_constraintStart_toStartOf="@id/book_description"
+        android:layout_marginLeft="100dp"
+        android:text="ADD/UPDATE"
+        android:textSize="17dp"
+       />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/books_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:background="@color/purple_500"
+        app:layout_constraintTop_toBottomOf="@id/add_btn"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

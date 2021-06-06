@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/purple_200"
+    tools:context="com.example.tema3.fragments.SecondFragment">
+
+    <TextView
+        android:id="@+id/second_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Titlul cartii"
+        android:textSize="30dp"
+        android:layout_marginTop="70dp"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:id="@+id/second_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/second_title"
+        app:layout_constraintStart_toStartOf="@id/second_title"
+        android:textColor="@color/black"
+        android:text="Autorul cartii"
+        android:textSize="25dp"/>
+    <TextView
+        android:id="@+id/second_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/second_author"
+        app:layout_constraintStart_toStartOf="@id/second_author"
+        android:textColor="@color/black"
+        android:text="Descrierea cartii"
+        android:minLines="4"
+        android:ellipsize="end"
+        android:textSize="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
